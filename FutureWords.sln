@@ -16,7 +16,9 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		FutureWords\FutureWords.Shared\FutureWords.Shared.projitems*{6279c845-92f8-4333-ab99-3d213163593c}*SharedItemsImports = 13
+		FutureWords\FutureWords.Shared\FutureWords.Shared.projitems*{7a2af623-84ed-4cbe-8ede-0fb796cb1a83}*SharedItemsImports = 4
 		FutureWords\FutureWords.Shared\FutureWords.Shared.projitems*{c24c3921-b994-4149-b5fc-50f8a8872257}*SharedItemsImports = 4
+		FutureWords\FutureWords.Shared\FutureWords.Shared.projitems*{e525f0c0-7f8c-41c4-917d-6ab3cbd4aefe}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
