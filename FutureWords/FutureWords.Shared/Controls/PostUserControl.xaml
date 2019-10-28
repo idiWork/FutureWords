@@ -2,12 +2,12 @@
     x:Class="FutureWords.Shared.Controls.PostUserControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:FutureWords.Shared.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:FutureWords.Shared.Models"
     mc:Ignorable="d"
     d:DesignHeight="250"
-    d:DesignWidth="400" d:DataContext="d:DesignInstance ">
+    d:DesignWidth="400" d:DataContext="{d:DesignInstance models:Post}">
 
     <Grid Background="White"
           Padding="10"
@@ -17,35 +17,43 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         
-        <TextBox Text="{Binding Title, Mode=OneWay}" Width="250"
+        <TextBox Text="{Binding Title, Mode=OneWay}"
                    Header="Title"
                    IsReadOnly="True"
                    Grid.Column="0"
                    Grid.Row="0"/>
-        <TextBox Text="{Binding Category, Mode=OneWay}" Width="100"
+        <TextBox Text="{Binding Category, Mode=OneWay}"
                  Header="Category"
                  IsReadOnly="True"
                  Grid.Column="1"
                  Grid.Row="0"/>
 
-        <TextBlock Text="{Binding Content, Mode=OneWay}" Width="350" Height="100"
-                   Grid.Column="0"
-                   Grid.Row="1"
-                   Grid.ColumnSpan="2"/>
+        <TextBox Text="{Binding Content, Mode=OneWay}"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 Grid.Column="0"
+                 Grid.Row="1"
+                 Grid.ColumnSpan="2"
+                 MinHeight="100"/>
         
-        <TextBox Text="{Binding PublicationDate, Mode=OneWay}" Width="200"
+        <TextBox Text="{Binding PublicationDate, Mode=OneWay}"
                  Header="Publication date"
                  IsReadOnly="True"
                  Grid.Column="0"
                  Grid.Row="2"/>
-        <Button Content="READ"
-                Grid.Column="1"
-                Grid.Row="2"/>
+        <TextBox Text="{Binding Link, Mode=OneWay}"
+                 Header="Link"
+                 IsReadOnly="True"
+                 Grid.Column="0"
+                 Grid.Row="3"
+                 Grid.ColumnSpan="2"/>
+        
     </Grid>
 </UserControl>

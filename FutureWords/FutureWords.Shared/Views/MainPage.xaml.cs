@@ -16,7 +16,7 @@ namespace FutureWords.Views
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            viewModel = new MainViewModel(new PostMockService());
+            viewModel = new MainViewModel(new PostService());
         }
     }
 }

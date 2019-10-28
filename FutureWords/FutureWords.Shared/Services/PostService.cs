@@ -6,14 +6,16 @@ namespace FutureWords.Shared.Services
 {
     public class PostService : IPostService
     {
-        public Post GetPost()
+        private readonly FeedReader _feedReader;
+
+        public PostService()
         {
-            throw new NotImplementedException();
+            _feedReader = new FeedReader();
         }
 
         public List<Post> GetPosts()
         {
-            throw new NotImplementedException();
+            return _feedReader.GetPostsFromFeed();
         }
     }
 }
