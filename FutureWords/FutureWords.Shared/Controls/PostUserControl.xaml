@@ -17,6 +17,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -47,8 +48,12 @@
                  IsReadOnly="True"
                  Grid.Column="0"
                  Grid.Row="2"/>
-        <Button Content="READ"
-                Grid.Column="1"
-                Grid.Row="2"/>
+        <TextBox Text="{Binding Link, Mode=OneWay}"
+                 Header="Link"
+                 IsReadOnly="True"
+                 Grid.Column="0"
+                 Grid.Row="3"
+                 Grid.ColumnSpan="2"/>
+        
     </Grid>
 </UserControl>
