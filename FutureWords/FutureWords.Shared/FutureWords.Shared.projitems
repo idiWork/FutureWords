@@ -18,6 +18,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\PostUserControl.xaml.cs">
+      <DependentUpon>PostUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\IPostService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\PostMockService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\PostService.cs" />
@@ -28,6 +31,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\PostUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

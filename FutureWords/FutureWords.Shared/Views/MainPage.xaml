@@ -5,8 +5,9 @@
     xmlns:local="using:FutureWords"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:toolkit="using:Microsoft.Toolkit.Uwp.UI.Controls"
     xmlns:models="using:FutureWords.Shared.Models"
+    xmlns:Controls="using:FutureWords.Shared.Controls"
+    xmlns:toolkit="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d">
 
     <toolkit:MasterDetailsView ItemsSource="{x:Bind viewModel.Posts}">
@@ -19,14 +20,14 @@
         </toolkit:MasterDetailsView.MasterHeader>
 
         <toolkit:MasterDetailsView.ItemTemplate>
-            <DataTemplate x:DataType="models:Post">
-                <TextBlock Text="{x:Bind Title}"/>
+            <DataTemplate>
+                <TextBlock Text="{Binding Title, Mode=OneWay}"/>
             </DataTemplate>
         </toolkit:MasterDetailsView.ItemTemplate>
 
         <toolkit:MasterDetailsView.DetailsTemplate>
-            <DataTemplate x:DataType="models:Post">
-                <TextBlock Text="{x:Bind Content}"/>
+            <DataTemplate>
+                <Controls:PostUserControl/>
             </DataTemplate>
         </toolkit:MasterDetailsView.DetailsTemplate>
 
