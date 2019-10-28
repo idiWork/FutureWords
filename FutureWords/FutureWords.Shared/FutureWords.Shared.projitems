@@ -21,6 +21,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\PostUserControl.xaml.cs">
       <DependentUpon>PostUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\FeedConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FeedReader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IPostService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\PostMockService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\PostService.cs" />
@@ -54,6 +56,5 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
   </ItemGroup>
 </Project>
